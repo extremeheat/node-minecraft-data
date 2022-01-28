@@ -11,6 +11,8 @@ export interface Version {
     // Returns true if the current version is equal to the `other` version's dataVersion
     ['=='](other: string): boolean
     type: 'pc' | 'bedrock'
+    // "Data version" for this Minecraft version, used for example when writing chunks to disk
+    dataVersion?: number
 }
 
 export interface VersionSet {
